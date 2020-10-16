@@ -11,5 +11,5 @@
 ## Link for the Website
 * URL: https://know-your-heart.herokuapp.com/ 
 
-## Link for the Gitlab Project Repository
+## Link for the Github Project Repository
 * https://github.com/SR8688/Know-Your-Heart
