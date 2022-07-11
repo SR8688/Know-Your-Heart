@@ -9,7 +9,7 @@
 -   The website should display the risk factors to the user as well as a probability or confidence score of their health in the coming years. If possible, the lifestyle choices to be made should also be displayed.
 
 ## Link for the Website
-* URL: https://know-your-heart.herokuapp.com/ 
+* URL: https://healthapp.shadmanraihan.xyz/
 
 ## Link for the Github Project Repository
 * https://github.com/SR8688/Know-Your-Heart
