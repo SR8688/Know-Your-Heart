@@ -5,7 +5,7 @@ from datetime import datetime
 import pickle
 import numpy as np
 import os 
-import pandas as pd
+# import pandas as pd
 
 
 app = Flask(__name__)
@@ -76,5 +76,5 @@ def contact_us():
 
 if __name__ == '__main__':
     # app = create_app()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
 
