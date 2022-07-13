@@ -5,13 +5,19 @@ from datetime import datetime
 import pickle
 import numpy as np
 import os 
-# import pandas as pd
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from prometheus_client import make_wsgi_app
 
 
 app = Flask(__name__)
 # NOTE: Please change the Mongo URI to match your local configuration for tests
 # This IP address reflects the current docker settings, need to find a way to
 # generate dynamically
+
+# Add prometheus wsgi middleware to route /metrics requests
+app.wsgi_app = DispatcherMiddleware(app.wsgi_app, {
+    '/metrics': make_wsgi_app()
+})
 
 app.config["MONGO_URI"] = "mongodb+srv://User_info:userinfo123@cluster0-hmtuj.gcp.mongodb.net/test?retryWrites=true&w=majority"
 mongo = PyMongo(app)
